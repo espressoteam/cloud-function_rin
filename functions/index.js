@@ -26,7 +26,8 @@ exports.notifyNewUser = functions.database.ref('/users/{userid}').onWrite(event 
                 title: 'Travel guide',
                 body: msg,
                 sound: 'default',
-                badge: '1'
+                badge: '1',
+                icon : "/static/img/icons/logo.png"
             }
         };
         return admin.messaging().sendToDevice(tokens, payload);
