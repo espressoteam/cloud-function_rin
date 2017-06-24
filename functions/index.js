@@ -49,8 +49,8 @@ function loadExistingUsers(newUserId) {
             let users = [];
             let displayName = "A new user";
             for (var property in data) {
-                displayName = data[property].displayName;
                 if (property === newUserId) {
+                    displayName = data[property].displayName;
                     console.log("new user displayName", data[property].displayName);
                 } else {
                     users.push(data[property]);
